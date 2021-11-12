@@ -29,6 +29,8 @@ Abaixo, o que você vai precisar para rodar a aplicação no seu computador:
 
 ## Arquitetura
 
+Next.js e React.js
+
 ---
 
 ## Estrutura dos Arquivos
@@ -36,8 +38,12 @@ Abaixo, o que você vai precisar para rodar a aplicação no seu computador:
 ```
 .
 ├── packages (diretório de projetos)
-│   ├── *
+│   ├── auth (projeto 1)
+│   ├── manager (projeto 2)
+│   └── shared (recursos compartilhados entre os projetos)
 ├── lerna.json (configurações do Lerna)
+└── tsconfig.json (configurações do TypeScript)
+
 ```
 
 ---
@@ -57,23 +63,29 @@ git clone https://github.com/thealex87/nextjs-monorepo.git
 # OU clonar o projeto por SSH no seu computador
 git clone git@github.com:thealex87/nextjs-monorepo.git
 
-# Instalar pacotes de dependências
-npm i
+# Instalar módulos e referenciar projetos/pacotes
+yarn bootstrap
 ```
 
 ---
 
 ## Como Utilizar
 
-Iniciando o Lerna
+Iniciando os projetos/pacotes
 
-```sh
-lerna init
+```bash
+yarn start
 ```
+
+Após rodar o comando acima, subirão as aplicações auth em http://localhost:3001 e manager em http://localhost:3002.
 
 ---
 
 ## Deploy
+
+```sh
+yarn build
+```
 
 ---
 

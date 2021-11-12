@@ -1,0 +1,17 @@
+{
+  "author": "",
+  "dependencies": {
+    "shared": "^1.0.0"
+  },
+  "description": "",
+  "keywords": [],
+  "license": "ISC",
+  "main": "index.js",
+  "name": "auth",
+  "scripts": {
+    "build": "next build",
+    "dev": "next -p 3001",
+    "start": "next start -p 3001"
+  },
+  "version": "1.0.0"
+}
